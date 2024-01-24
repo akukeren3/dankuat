@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Forte', cursive;
+    position: relative;
+}
+
+h1 {
+    color: rgb(235, 201, 171); /* Warna tulisan peach */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    color: rgb(165, 142, 122); /* Warna tulisan peach */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+p {
+    color: rgb(146, 160, 221); /* Warna tulisan pink */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.tap-here-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(173, 216, 230, 0.7); /* Warna kotak transparan biru muda */
+    color: rgb(255, 255, 255); /* Warna tulisan di dalam kotak */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.tap {
+    display: inline-block;
+    padding: 10px 20px;
+    color: rgba(93, 166, 190, 0.7); /* Warna kotak transparan biru muda */
+}
+
+.tap-here-link:hover {
+    background-color: rgba(173, 216, 230, 1); /* Warna kotak transparan biru muda saat hover */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Mengubah ke center agar kotak-kotak berada di tengah */
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-custom {
+    flex: 0 0 calc(33.333333% - 20px); /* 33.33% - 20px margin */
+    max-width: calc(33.333333% - 20px);
+    margin: 0 10px 20px 10px; /* Menambahkan margin untuk memberikan jarak antar kotak */
+}
+
+.blog-lst {
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+
+.single-blog {
+    position: relative;
+}
+
+.blog-image {
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 220px; /* Menentukan lebar container */
+    height: 220px; /* Menentukan tinggi container */
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 20px;
+    background-color: #ecebec;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+h4 {
+    color: black;
+    margin-top: 0;
+}
+
+
+
+.blog-post-info span {
+    margin-right: 10px;
+    color: #7db2bb;
+}
+
+.readmore {
+    display: inline-block;
+    margin-top: 10px;
+    color: #141b20;
+    text-decoration: none;
+    text-align: left; /* Membuat teks di dalam kotak berada di kiri */
+}
+
+.content {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff; /* Warna latar konten */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    
+}
+
+.points {
+    color: #000; /* Warna teks hitam */
+}
+
+.sticker {
+    position: absolute;
+    top: 100%; /* Mengatur posisi stiker di bawah konten */
+    left: 27%; /* Posisi horizontal di tengah */
+    transform: translateX(-50%); /* Pusatkan elemen horizontal */
+    cursor: pointer;
+    animation: shiftAnimation 5s linear infinite; /* Animasi bergeser ke kanan dan kembali ke tengah */
+}
+
+@keyframes shiftAnimation {
+    0% {
+        transform: translateX(-50%); /* Posisi awal di tengah */
+    }
+    25% {
+        transform: translateX(50%); /* Posisi ke kanan pada 25% animasi */
+    }
+    50% {
+        transform: translateX(-50%); /* Posisi di tengah kembali pada 50% animasi */
+    }
+    75% {
+        transform: translateX(50%); /* Posisi ke kanan pada 75% animasi */
+    }
+    100% {
+        transform: translateX(-50%); /* Posisi di tengah kembali pada akhir animasi */
+    }
+}
+
+.sticker:hover {
+    transform: scale(1); /* Perubahan ukuran pada hover */
+}
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medicine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Guessing Game</h1>
+    <p>Pilih Angka Dari 1-100! Kalau Benar Dapat Salad!</p>
+    <input type="number" id="guess" min="1" max="100" value="5">
+    <a href="#" class="tap" onclick="checkGuess()">Submit</a>
+    
+    <p id="result"></p>
+
+    <script>
+        let numberToGuess = Math.floor(Math.random() * 100) + 1;
+
+        function checkGuess() {
+            let userGuess = parseInt(document.getElementById("guess").value);
+            if (userGuess < numberToGuess) {
+                document.getElementById("result").innerText = "Kerendahan tau!";
+            } else if (userGuess > numberToGuess) {
+                document.getElementById("result").innerText = "Ketinggian tau!";
+            } else {
+                document.getElementById("result").innerText = "SELAMAT KAMU DAPAT SALAD. S&K BERLAKU";
+            }
+        }
+    </script>
+
+    <a href="surend.html" class="tap">
+        𓂃࣪˖ ༯ klik kalau prustasi ༯ 𓂃࣪˖ 
+    </a>
+
+</body>
+</html>
